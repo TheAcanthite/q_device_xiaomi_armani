@@ -9,4 +9,5 @@ sysinfo: 1
 getcwd: 1
 getsockopt: 1
 getdents64: 1
-
+inotify_init1: 1
+inotify_add_watch: 1
