@@ -169,6 +169,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
+	
+# Perf
+PRODUCT_PACKAGES += \
+    libshims_atomic
 
 # Power
 PRODUCT_PROPERTY_OVERRIDES += \

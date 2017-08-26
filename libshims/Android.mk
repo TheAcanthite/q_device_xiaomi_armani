@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,4 +14,14 @@
 # limitations under the License.
 #
 
-include $(call first-makefiles-under,$(call my-dir))
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := atomic.cpp
+
+LOCAL_MODULE := libshims_atomic
+LOCAL_MODULE_TAGS := optional
+LOCAL_SHARED_LIBRARIES := liblog
+
+include $(BUILD_SHARED_LIBRARY)
