@@ -2,6 +2,6 @@
 # extension of services/mediaextractor/seccomp_policy/mediaextractor-arm.policy
 readlinkat: 1
 pread64: 1
+mremap: 1
 getsockopt: 1
 nanosleep: 1
-
