@@ -83,7 +83,7 @@ PRODUCT_COPY_FILES += \
 # Connectivity
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
-	
+
 # Debug
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
@@ -112,7 +112,7 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8226
-	
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
     $(LOCAL_PATH)/configs/gps/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
@@ -171,7 +171,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
-	
+
 # Perf
 PRODUCT_PACKAGES += \
     libshims_atomic
@@ -187,10 +187,10 @@ PRODUCT_PACKAGES += \
     init.armani.usb.rc \
     init.qcom.power.rc \
     ueventd.armani.rc
-	
+
 PRODUCT_PACKAGES += \
     init.recovery.sh
-	
+
 # Recorder
 PRODUCT_PACKAGES += \
     Recorder
