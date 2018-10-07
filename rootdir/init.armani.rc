@@ -33,9 +33,6 @@ on early-init
 
 on init
 
-    # Set permissions for persist partition
-    mkdir /persist 0771 system system
-
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
 
@@ -119,11 +116,6 @@ on post-fs-data
 
     # Create directory used by audio subsystem
     mkdir /data/vendor/audio 0770 audio audio
-	
-    # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
-    # We chown/chmod /persist again so because mount is run as root + defaults
-    chown system system /persist
-    chmod 0771 /persist
 
     # Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
