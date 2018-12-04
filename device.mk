@@ -236,12 +236,10 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    hostapd_default.conf \
     p2p_supplicant_overlay.conf \
     wpa_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
-    wifilogd \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
@@ -249,7 +247,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcurl \
     libqsap_sdk \
-    libQWiFiSoftApCfg \
     libwcnss_qmi \
     wcnss_service
 
