@@ -88,7 +88,6 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 # Graphics
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
-USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
@@ -162,9 +161,6 @@ TARGET_RIL_VARIANT := caf
 
 # Shims
 TARGET_LD_SHIM_LIBS := /system/vendor/lib/hw/camera.vendor.msm8226.so|libshim_camera.so
-
-# Snapdragon LLVM
-TARGET_USE_SDCLANG := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
