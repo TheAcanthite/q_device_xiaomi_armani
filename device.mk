@@ -155,7 +155,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.legacyencoder=true \
     media.stagefright.less-secure=true \
-    persist.media.treble_omx=false \
     camera.disable_treble=true
 
 # Permissions
