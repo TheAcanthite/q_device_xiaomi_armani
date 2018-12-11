@@ -158,7 +158,11 @@ TARGET_RIL_VARIANT := caf
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Shims
-TARGET_LD_SHIM_LIBS := /system/vendor/lib/hw/camera.vendor.msm8226.so|libshim_camera.so
+TARGET_LD_SHIM_LIBS += \
+    /system/vendor/lib/hw/camera.vendor.msm8226.so|libshim_camera.so
+TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
+    /vendor/bin/mm-qcamera-daemon=20 \
+    /system/bin/mediaserver=20
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
