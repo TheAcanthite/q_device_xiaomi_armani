@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2018 The Lineage Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@
 #include <string.h>
 
 #define MAC_ADDR_SIZE 6
-#define BD_ADDR_FILE "/data/misc/bluetooth/bdaddr"
+#define BD_ADDR_FILE "/data/vendor/bluetooth/bdaddr"
 
 extern int qmi_nv_read_bd_addr(char** mac);
 

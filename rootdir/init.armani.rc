@@ -253,13 +253,13 @@ service bdaddr /vendor/bin/bdaddr_xiaomi
     oneshot
 
 on property:init.svc.bdaddr=stopped
-    chmod 644 /data/misc/bluetooth/bdaddr
-    chown bluetooth bluetooth /data/misc/bluetooth/bdaddr
+    chmod 0644 /data/vendor/bluetooth/bdaddr
+    chown bluetooth bluetooth /data/vendor/bluetooth/bdaddr
 
 service hciattach /vendor/bin/init.armani.bt.sh
     class late_start
     user bluetooth
-    group qcom_oncrpc bluetooth net_bt_admin system
+    group bluetooth net_bt_admin system
     disabled
     oneshot
 
@@ -267,6 +267,12 @@ on property:bluetooth.hciattach=true
     start hciattach
 
 on property:bluetooth.hciattach=false
+    setprop vendor.bluetooth.status off
+	
+on property:vendor.bluetooth.hciattach=true
+    start hciattach
+
+on property:vendor.bluetooth.hciattach=false
     setprop bluetooth.status off
 
 # QMUX must be in multiple groups to support external process connections

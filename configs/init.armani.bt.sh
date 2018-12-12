@@ -5,12 +5,12 @@ LOG_NAME="${0}:"
 
 loge ()
 {
-  /system/bin/log -t $LOG_TAG -p e "$LOG_NAME $@"
+  /system/vendor/bin/log -t $LOG_TAG -p e "$LOG_NAME $@"
 }
 
 logi ()
 {
-  /system/bin/log -t $LOG_TAG -p i "$LOG_NAME $@"
+  /system/vendor/bin/log -t $LOG_TAG -p i "$LOG_NAME $@"
 }
 
 failed ()
@@ -22,9 +22,10 @@ failed ()
 POWER_CLASS=`getprop qcom.bt.dev_power_class`
 
 #load bd addr
-BDADDR=`cat /data/misc/bluetooth/bdaddr`
+BDADDR=`cat /data/vendor/bluetooth/bdaddr`
 
 setprop bluetooth.status off
+setprop vendor.bluetooth.status off
 
 logi "BDADDR: $BDADDR"
 
@@ -51,9 +52,11 @@ case $? in
   0) logi "Bluetooth QSoC firmware download succeeded, $BTS_DEVICE $BTS_TYPE $BTS_BAUD $BTS_ADDRESS";;
   *) failed "Bluetooth QSoC firmware download failed" $exit_code_hci_qcomm_init;
      setprop bluetooth.status off
+     setprop vendor.bluetooth.status off
      exit $exit_code_hci_qcomm_init;;
 esac
 
 setprop bluetooth.status on
+setprop vendor.bluetooth.status on
 
 exit 0
