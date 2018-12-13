@@ -36,11 +36,6 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
-# Art
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-flags=--no-watch-dog \
-    dalvik.vm.dex2oat-swap=false
-
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -76,10 +71,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init.armani.bt.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.armani.bt.sh
 
-# CABL
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.cabl=0
-
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8226 \
@@ -98,11 +89,8 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8226 \
     memtrack.msm8226 \
     liboverlay \
-    libgenlock
-
-# DRM
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true
+    libgenlock \
+    libtinyxml
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -202,25 +190,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     sensors.msm8226
 
-# Storage
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sys.sdcardfs=false
-
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8226.conf:system/etc/thermal-engine-8226.conf
-
-# Time services
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true
-
-# Tools
-PRODUCT_PACKAGES += \
-    libtinyxml
-
-# Vendor security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2016-10-01
 
 # WCNSS
 PRODUCT_COPY_FILES += \
@@ -247,8 +219,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     ro.disableWifiApFirmwareReload=true
-
-# WFD
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
