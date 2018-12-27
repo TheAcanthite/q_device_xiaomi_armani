@@ -16,9 +16,6 @@
 
 DEVICE_PATH := device/xiaomi/armani
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-smd"
-
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
