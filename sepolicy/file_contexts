@@ -1,5 +1,4 @@
 # Bluetooth
-/system/bin/bdaddr_xiaomi                     u:object_r:bdaddr_exec:s0
 /system/bin/init\.armani\.bt\.sh              u:object_r:bluetooth_loader_exec:s0
 
 # Camera
