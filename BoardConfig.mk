@@ -148,7 +148,8 @@ TARGET_RIL_VARIANT := caf
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
-    /system/vendor/lib/hw/camera.vendor.msm8226.so|libshim_camera.so
+    /system/vendor/lib/hw/camera.vendor.msm8226.so|libshim_camera.so \
+    /system/vendor/lib/hw/camera.vendor.msm8226.so|libshim_graphicbuffer.so
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /vendor/bin/mm-qcamera-daemon=20 \
     /system/bin/mediaserver=20

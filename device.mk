@@ -71,6 +71,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     camera.msm8226 \
     libshim_camera \
+    libshim_graphicbuffer \
     libxml2 \
     Snap
 
