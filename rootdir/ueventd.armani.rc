@@ -35,14 +35,23 @@
 /dev/smdcnt_rev7          0640   radio      radio
 /dev/smdcnt_rev8          0640   radio      radio
 
-/dev/video*               0660   system     camera
-/dev/media*               0660   system     camera
-/dev/v4l-subdev*          0660   system     camera
 /dev/qseecom              0660   system     drmrpc
-/dev/jpeg0                0660   system     camera
+
 /dev/adsprpc-smd          0664   system     system
 /dev/smd2                 0660   bluetooth  bluetooth
 /dev/smd3                 0660   bluetooth  bluetooth
+
+# Permissions for camera
+/dev/video*               0660   system     camera
+/dev/media*               0660   system     camera
+/dev/v4l-subdev*          0660   system     camera
+/dev/gemini0              0660   system     camera
+/dev/jpeg0                0660   system     camera
+/dev/jpeg1                0660   system     camera
+/dev/jpeg2                0660   system     camera
+/dev/msm_camera/*         0660   system     camera
+/dev/gemini/              0660   system     camera
+/dev/mercury0             0660   system     camera
 
 # Permissions for audio
 /dev/msm_aac              0660   system     audio
