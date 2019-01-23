@@ -195,7 +195,6 @@ vendor/lib/libsmemlog.so
 bin/netmgrd:vendor/bin/netmgrd
 bin/qmuxd:vendor/bin/qmuxd
 bin/radish:vendor/bin/radish
-bin/rfs_access:vendor/bin/rfs_access
 bin/rmt_storage:vendor/bin/rmt_storage
 lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
 vendor/lib/libcneapiclient.so

@@ -176,6 +176,9 @@ PRODUCT_PACKAGES += \
     init.armani.rc \
     init.armani.usb.rc \
     ueventd.armani.rc
+	
+PRODUCT_PACKAGES += \
+    init.qcom.power.rc
 
 # Seccomp
 PRODUCT_COPY_FILES += \
