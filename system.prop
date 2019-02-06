@@ -8,20 +8,17 @@ dalvik.vm.verify-bytecode=false
 persist.sys.purgeable_assets=1
 
 # Audio
-ro.qc.sdk.audio.ssr=false
-ro.qc.sdk.audio.fluencetype=fluence
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=true
-persist.audio.fluence.speaker=false
-audio.offload.pcm.16bit.enable=false
-audio.offload.pcm.24bit.enable=false
-audio.offload.buffer.size.kb=32
-audio.offload.gapless.enabled=true
-audio.offload.multiple.enabled=false
-audio.offload.video=false
-audio.offload.disable=true
-av.streaming.offload.enable=false
-use.voice.path.for.pcm.voip=true
+af.fast_track_multiplier=1
+audio.deep_buffer.media=true
+audio.offload.pcm.16bit.enable=true
+audio.offload.pcm.24bit.enable=true
+audio.offload.video=true
+persist.vendor.audio.fluence.voicecall=true
+ro.vendor.audio.sdk.fluencetype=fluence
+vendor.audio_hal.period_size=192
+vendor.audio.offload.buffer.size.kb=32
+vendor.audio.offload.gapless.enabled=true
+vendor.audio.offload.multiple.enabled=false
 
 # Bluetooth
 qcom.bt.dev_power_class=1
