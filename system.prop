@@ -69,6 +69,10 @@ ro.qc.sdk.izat.service_mask=0x5
 persist.gps.qc_nlp_in_use=0
 persist.loc.nlp_name=com.qualcomm.services.location
 
+# Media
+media.aac_51_output_enabled=true
+mm.enable.smoothstreaming=true
+
 # Memory optimizations
 ro.vendor.qti.am.reschedule_service=true
 ro.vendor.qti.sys.fw.use_trim_settings=true
