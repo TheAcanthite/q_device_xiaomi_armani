@@ -171,12 +171,13 @@ on post-fs-data
     mkdir /data/time 0770 system system
 
     # Create and chmod directories used by sensor subsystem
-    mkdir /persist/sensors 0775 system root
-    write /persist/sensors/sensors_settings 1
-    chmod 0644 /persist/sensors/sensors_settings
-    chown system root /persist/sensors/sensors_settings
-    mkdir /data/misc/sensors 0775 system system
-    restorecon_recursive /data/misc/sensors
+    mkdir /persist/misc/sensors 0775 system root
+    write /persist/misc/sensors/sensors_settings 1
+    chmod 0644 /persist/misc/sensors/sensors_settings
+    chown system root /persist/misc/sensors/sensors_settings
+    mkdir /data/system/sensors 0775 system system
+    write /data/system/sensors/sensors_settings 1
+    chown system root /data/system/sensors/sensors_settings
 
     setprop vold.post_fs_data_done 1
 
