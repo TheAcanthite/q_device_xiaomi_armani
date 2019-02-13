@@ -57,6 +57,7 @@ const char KEY_QC_AE_BRACKET_HDR[] = "ae-bracket-hdr";
 const char KEY_QC_CAPTURE_BURST_EXPOSURE[] = "capture-burst-exposures";
 const char KEY_QC_MORPHO_HDR[] = "morpho-hdr";
 const char KEY_QC_ZSL[] = "zsl";
+const char KEY_QC_DIS[] = "dis";
 const char FOCUS_MODE_MANUAL_POSITION[] = "manual";
 const char WHITE_BALANCE_MANUAL_CCT[] = "manual-cct";
 
@@ -182,9 +183,11 @@ static char *camera_fixup_setparams(int id, const char *settings)
         hdrMode = (!strcmp(params.get(android::CameraParameters::KEY_SCENE_MODE), "hdr"));
     }
 
-    /* Disable ZSL and HDR snapshots in video mode */
+    /* Disable ZSL , DIS and HDR snapshots in video mode */
     if (videoMode) {
         params.set(KEY_QC_ZSL, "off");
+        params.set(KEY_QC_DIS, "off");
+
         if (hdrMode) {
             params.set(android::CameraParameters::KEY_SCENE_MODE, "auto");
         }
