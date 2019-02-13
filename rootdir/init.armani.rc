@@ -226,6 +226,15 @@ service netmgrd /vendor/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio inet system
+	
+service mpdecision /vendor/bin/mpdecision --avg_comp
+    user root
+    group root system
+    group root readproc
+    disabled
+	
+on property:sys.boot_completed=1
+    start mpdecision
 
 service sensors /vendor/bin/sensors.qcom
     class late_start
