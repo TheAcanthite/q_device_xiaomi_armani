@@ -94,9 +94,6 @@ ro.telephony.ril.config=simactivation
 # Time
 persist.timed.enable=true
 
-# Vendor security patch
-ro.lineage.build.vendor_security_patch=2016-10-01
-
 # ADB /Debugging
 ro.secure=0
 ro.adb.secure=0

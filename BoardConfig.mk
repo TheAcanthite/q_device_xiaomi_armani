@@ -152,6 +152,9 @@ BOARD_NO_SECURE_DISCARD := true
 # Radio
 TARGET_RIL_VARIANT := caf
 
+# Security Patch Level
+VENDOR_SECURITY_PATCH := 2016-10-01
+
 # SELinux
 #include device/qcom/sepolicy/sepolicy.mk
 #include device/qcom/sepolicy/legacy-sepolicy.mk
