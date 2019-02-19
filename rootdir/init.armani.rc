@@ -33,6 +33,9 @@ on early-init
 
 on init
 
+    # Set permissions for persist partition
+    mkdir /persist 0771 system system
+
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
 
@@ -43,8 +46,6 @@ on fs
     symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
 
     mount_all /vendor/etc/fstab.armani
-
-    restorecon_recursive /persist
 
     setprop sys.usb.ffs.aio_compat 1
 
@@ -169,6 +170,12 @@ on post-fs-data
 
     # For Backward compatibility
     mkdir /data/time 0770 system system
+	
+    # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
+    # We chown/chmod /persist again so because mount is run as root + defaults
+    chown system system /persist
+    chmod 0771 /persist
+    restorecon_recursive /persist
 
     # Create and chmod directories used by sensor subsystem
     mkdir /persist/misc/sensors 0775 system root
