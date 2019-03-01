@@ -26,6 +26,7 @@ ro.bluetooth.dun=true
 ro.bluetooth.sap=true
 ro.bluetooth.hfp.ver=1.6
 ro.qualcomm.bt.hci_transport=smd
+ro.bt.bdaddr_path=/data/misc/bluetooth/bdaddr
 
 # Camera
 camera2.portability.force_api=1
