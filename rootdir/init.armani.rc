@@ -243,9 +243,6 @@ service mpdecision /vendor/bin/mpdecision --avg_comp
     group root system
     group root readproc
     disabled
-	
-on property:sys.boot_completed=1
-    start mpdecision
 
 service sensors /vendor/bin/sensors.qcom
     class late_start
