@@ -15,5 +15,5 @@
 /dev/block/bootdevice/by-name/recovery              /recovery      emmc      defaults                                                     defaults
 /dev/block/bootdevice/by-name/misc                  /misc          emmc      defaults                                                     defaults
 
-/devices/msm_sdcc.2/mmc_host*                       auto           auto      defaults                                                     voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/msm_sdcc.2/mmc_host*                       auto           auto      defaults                                                     voldmanaged=sdcard1:auto
 /devices/platform/msm_hsusb_host/usb*               auto           auto      defaults                                                     voldmanaged=usb:auto
