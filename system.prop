@@ -37,11 +37,6 @@ ro.qualcomm.cabl=0
 # DRM
 drm.service.enabled=true
 
-# Qualcomm® aptX™
-persist.bt.enableAptXHD=true
-persist.service.btui.use_aptx=1
-persistent.bt.a2dp_offload_cap=sbc-aptx-aptXHD
-
 # Dalvik
 dalvik.vm.heapstartsize=8m
 dalvik.vm.heapgrowthlimit=96m
