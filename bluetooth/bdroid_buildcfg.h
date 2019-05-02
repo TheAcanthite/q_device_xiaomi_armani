@@ -20,8 +20,6 @@
 
 #define BTM_DEF_LOCAL_NAME   "Xiaomi HM 1S"
 
-#define BLUETOOTH_QTI_SW TRUE
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    16
-#define BT_CLEAN_TURN_ON_DISABLED 1
 #endif
