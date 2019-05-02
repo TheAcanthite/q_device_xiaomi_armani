@@ -168,6 +168,9 @@ TARGET_LD_SHIM_LIBS += \
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /vendor/bin/mm-qcamera-daemon=20 \
     /system/bin/mediaserver=20
+	
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 19
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
