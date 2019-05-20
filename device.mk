@@ -185,10 +185,11 @@ PRODUCT_PACKAGES += \
     fstab.armani \
     init.armani.rc \
     init.armani.usb.rc \
+    init.qcom.power.rc \
     ueventd.armani.rc
 	
 PRODUCT_PACKAGES += \
-    init.qcom.power.rc
+    init.recovery.sh
 
 # Seccomp
 PRODUCT_COPY_FILES += \
