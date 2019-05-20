@@ -69,10 +69,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service
-	
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sysfs
 
 # Power
 PRODUCT_PACKAGES += \
