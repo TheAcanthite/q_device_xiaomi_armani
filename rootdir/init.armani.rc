@@ -158,10 +158,12 @@ on post-fs-data
     # Create directories for Location services
     mkdir /data/vendor/location 0770 gps gps
     mkdir /data/vendor/location/mq 0770 gps gps
+    mkdir /data/vendor/location/xtwifi 0770 gps gps   
 	
     # Create location directories for backward compatibility
     mkdir /data/misc/location 0770 gps gps
     mkdir /data/misc/location/mq 0770 gps gps
+    mkdir /data/misc/location/xtwifi 0770 gps gps
 
     # Create the directories used by Wireless subsystem
     mkdir /data/vendor/wifi 0770 wifi wifi
