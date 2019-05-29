@@ -207,6 +207,11 @@ service rmt_storage /vendor/bin/rmt_storage
     user root
     group system wakelock
     shutdown critical
+	
+service rfs_access /vendor/bin/rfs_access
+    class core
+    user system
+    group system net_raw
 
 service bdaddr /vendor/bin/bdaddr_xiaomi
     class core
