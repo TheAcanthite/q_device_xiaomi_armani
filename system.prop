@@ -62,6 +62,8 @@ persist.graphics.vulkan.disable=true
 media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
 debug.stagefright.ccodec=0
+debug.stagefright.omx_default_rank.sw-audio=1
+debug.stagefright.omx_default_rank=0
 
 # Memory optimizations
 ro.vendor.qti.am.reschedule_service=true
