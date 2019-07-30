@@ -311,7 +311,8 @@ service location_mq /vendor/bin/location-mq
 
 service charger /system/bin/charger
     class charger
-    critical
+    user system
+    group system graphics input
     seclabel u:r:charger:s0
 	
 service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
