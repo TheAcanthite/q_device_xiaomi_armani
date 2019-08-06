@@ -25,7 +25,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/armani/armani-vendor.mk)
 $(call inherit-product, build/target/product/go_defaults.mk)
 
 # Inherit some common LineageOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_mini_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := armani

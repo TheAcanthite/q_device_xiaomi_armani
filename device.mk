@@ -188,6 +188,10 @@ PRODUCT_PACKAGES += \
 	
 PRODUCT_PACKAGES += \
     init.recovery.sh
+	
+# Recorder
+PRODUCT_PACKAGES += \
+    Recorder
 
 # Seccomp
 PRODUCT_COPY_FILES += \
