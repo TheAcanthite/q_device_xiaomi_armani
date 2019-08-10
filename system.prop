@@ -58,12 +58,6 @@ debug.sf.latch_unsignaled=1
 debug.sf.recomputecrop=0
 persist.graphics.vulkan.disable=true
 
-# GPS
-ro.gps.agps_provider=1
-ro.qc.sdk.izat.premium_enabled=1
-ro.qc.sdk.izat.service_mask=0x5
-persist.gps.qc_nlp_in_use=0
-
 # Media
 media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
