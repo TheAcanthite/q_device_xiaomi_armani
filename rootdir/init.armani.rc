@@ -48,7 +48,7 @@ on fs
     mount_all /vendor/etc/fstab.armani
 
     restorecon_recursive /persist
-
+	
     setprop sys.usb.ffs.aio_compat 1
 
 on early-boot
@@ -63,7 +63,7 @@ on boot
     chown system graphics /sys/class/graphics/fb0/idle_time
     chmod 0664 /sys/class/graphics/fb0/dynamic_fps
     chmod 0664 /sys/class/graphics/fb0/idle_time
-
+	
     chown bluetooth bluetooth /sys/module/hci_smd/parameters/hcismd_set
     chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
 
@@ -349,4 +349,3 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     group system input wakelock
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
-
