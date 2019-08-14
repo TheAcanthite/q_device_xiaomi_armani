@@ -17,11 +17,24 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
+LOCAL_SRC_FILES := camera_shim.cpp
+LOCAL_MODULE := libshim_camera
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_SHARED_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := graphicbuffer.cpp
+LOCAL_SHARED_LIBRARIES := libui
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE := libshim_graphicbuffer
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_SRC_FILES := atomic.cpp
-
 LOCAL_MODULE := libshims_atomic
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES := liblog
-
 include $(BUILD_SHARED_LIBRARY)
