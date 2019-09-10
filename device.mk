@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init.armani.bt.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.armani.bt.sh
 
+# Binder support symbols
+PRODUCT_PACKAGES += \
+    libshim_binder
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8226 \
