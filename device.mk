@@ -83,6 +83,10 @@ PRODUCT_COPY_FILES += \
 # Connectivity
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
+	
+# Debug
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
 # Display
 PRODUCT_PACKAGES += \
@@ -203,6 +207,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     sensors.msm8226
+
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 19
 
 # Thermal
 PRODUCT_COPY_FILES += \
