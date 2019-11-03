@@ -84,7 +84,6 @@ on property:sys.boot_completed=1
     write /sys/module/msm_pm/modes/cpu0/power_collapse/idle_enabled 1
 
     rm /data/system/default_values
-    setprop sys.io.scheduler "bfq"
     setprop vendor.post_boot.parsed 1
     start mpdecision
 
