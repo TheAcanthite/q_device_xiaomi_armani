@@ -262,3 +262,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     ro.disableWifiApFirmwareReload=true
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += device/xiaomi/armani
+
