@@ -182,3 +182,6 @@ WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 
 # inherit from the proprietary version
 -include vendor/xiaomi/armani/BoardConfigVendor.mk
+
+# Ignore Neverallows
+SELINUX_IGNORE_NEVERALLOWS := true
