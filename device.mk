@@ -58,8 +58,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbt-vendor \
-    bdaddr_xiaomi
+#    libbt-vendor \
+#    bdaddr_xiaomi
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init.armani.bt.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.armani.bt.sh
@@ -70,11 +70,11 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8226 \
-    libshim_camera \
-    libshim_graphicbuffer \
-    libxml2 \
-    Snap
+#    camera.msm8226 \
+#    libshim_camera \
+#    libshim_graphicbuffer \
+#    libxml2 \
+#    Snap
 
 # Camera configurations
 PRODUCT_COPY_FILES += \
@@ -92,20 +92,6 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_DISABLE_SCUDO := true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.shared=quicken \
-    pm.dexopt.downgrade_after_inactive_days=10
-	
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.traced.enable=1 \
-    ro.lmk.critical_upgrade=true \
-    ro.lmk.upgrade_pressure=40 \
-    ro.lmk.downgrade_pressure=60 \
-    ro.lmk.kill_heaviest_task=false \
-    ro.statsd.enable=true
-	
-PRODUCT_PACKAGES += InProcessNetworkStack
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/go_handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
