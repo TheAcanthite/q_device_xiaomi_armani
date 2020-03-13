@@ -86,24 +86,6 @@ PRODUCT_PACKAGES += \
 	
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_DISABLE_SCUDO := true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.shared=quicken \
-    pm.dexopt.downgrade_after_inactive_days=10
-	
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.traced.enable=1 \
-    ro.lmk.critical_upgrade=true \
-    ro.lmk.upgrade_pressure=40 \
-    ro.lmk.downgrade_pressure=60 \
-    ro.lmk.kill_heaviest_task=false \
-    ro.statsd.enable=true
-	
-PRODUCT_PACKAGES += InProcessNetworkStack
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/go_handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Display
 PRODUCT_PACKAGES += \
