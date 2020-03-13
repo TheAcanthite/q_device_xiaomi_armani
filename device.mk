@@ -252,3 +252,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += device/xiaomi/armani
 
+# Build with specific settings for armani
+$(call inherit-product, $(LOCAL_PATH)/go_msm8226.mk)
+
+# Apply Dalvik config for 1G phone
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
