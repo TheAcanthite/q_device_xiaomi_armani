@@ -155,7 +155,7 @@ VENDOR_SECURITY_PATCH := 2016-10-01
 #include device/qcom/sepolicy-legacy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-temp
-
+SELINUX_IGNORE_NEVERALLOWS := true
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /system/vendor/lib/hw/camera.vendor.msm8226.so|libshim_camera.so \
